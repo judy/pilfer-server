@@ -13,6 +13,7 @@ td { white-space: nowrap; }
 table.line-profile {
   // Override table's border style. Only border the table and th bottom.
   border: 1px solid #ddd;
+  overflow: hidden;
   th { border-left: none; }
   td { border-left: none; }
   th, td {
@@ -28,6 +29,10 @@ table.line-profile {
       display: inline-block;
       width: 100%;
     }
+  }
+
+  td.file-content pre {
+    width: 5000px
   }
 
   td {
