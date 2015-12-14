@@ -15,3 +15,6 @@ $ ->
   cookieValue  = document.cookie.match(/time-toggle=([\w-]+)/)
   selectedTime = if cookieValue then cookieValue[1] else 'wall-time'
   $("##{selectedTime}").trigger 'click'
+
+  d3.select('table.line-profile')
+    .selectAll('.wall-value')

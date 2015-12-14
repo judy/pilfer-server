@@ -25,7 +25,7 @@ module ProfilesHelper
             else
               profile_line_wall_time(file_profile, index) || 0
             end
-    total = total / 1000.0
+    total /= 1000.0
     if total > @minimum * 100
       'error'
     elsif total > @minimum
@@ -52,10 +52,7 @@ module ProfilesHelper
   def profile_line_idle_time(file_profile, index)
     line_profile = file_profile['lines'][index.to_s]
     return unless line_called?(line_profile)
-    [ 0,
-      profile_line_wall_time(file_profile, index) -
-        profile_line_cpu_time(file_profile, index)
-    ].max
+    [0, profile_line_wall_time(file_profile, index) - profile_line_cpu_time(file_profile, index)].max
   end
 
   def profile_line_calls(file_profile, index)

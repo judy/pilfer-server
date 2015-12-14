@@ -27,21 +27,21 @@
     <td class="stats wall-time">
 <pre>
 <%- line_data[:wall].each_with_index do |datum, index| -%>
-<span class="line-<%= index %>"><%= profile_time(datum) %></span>
+<span class="line-<%= index %> <%= 'wall-value' if datum %>"><%= profile_time(datum) %></span>
 <%- end -%>
 </pre>
     </td>
     <td class="stats cpu-time">
 <pre>
 <%- line_data[:cpu].each_with_index do |datum, index| -%>
-<span class="line-<%= index %>"><%= profile_time(datum) %></span>
+<span class="line-<%= index %> <%= 'cpu-value' if datum %>"><%= profile_time(datum) %></span>
 <%- end -%>
 </pre>
     </td>
     <td class="stats cpu-time">
 <pre>
 <%- line_data[:idle].each_with_index do |datum, index| -%>
-<span class="line-<%= index %>"><%= profile_time(datum) %></span>
+<span class="line-<%= index %> <%= 'idle-value' if datum %>"><%= profile_time(datum) %></span>
 <%- end -%>
 </pre>
     </td>

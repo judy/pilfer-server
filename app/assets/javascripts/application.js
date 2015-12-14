@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+// Bower packages
+//= require d3/d3
+//
 //= require_tree .
